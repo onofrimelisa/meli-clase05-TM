@@ -25,15 +25,7 @@ public class Person implements Precedable<Person>{
 
     @Override
     public int precedeTo(Person p) {
-        if (this.dni < p.dni){
-            return 1;
-        }
-
-        if (this.dni > p.dni){
-            return -1;
-        }
-
-        return 0;
+        return p.dni - this.dni;
     }
 
     @Override
